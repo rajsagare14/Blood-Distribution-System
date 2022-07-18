@@ -30,3 +30,18 @@ And any other relevant Data
 Implement and test project in market
 </p>
 <hr>
+<h3>HTML CSS required for Frontend:</h3>
+	<ul>
+	<li>Index Page With all Links</li>
+	<li>Admin Login Page and dashboard</li>
+		&nbsp;&nbsp;&nbsp;&nbsp;can add and manage banks and hospitals<br>
+	<li>Hospital Login page and dashboard</li>
+		&nbsp;&nbsp;&nbsp;&nbsp;only take blood(as required) from banks<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;loan blood<br>
+	<li>Blood Bank Login Page and dashboard</li>
+		&nbsp;&nbsp;&nbsp;&nbsp;give(to hospitals and other banks) and take blood(from donors and other banks)<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;lend and loan blood<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;send messages to donors when their blood gets used<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;send messages to donors when they are again eligible for blood donation<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;send messages to donors for staying healthy<br>
+	</ul>
