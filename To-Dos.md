@@ -45,3 +45,20 @@ Implement and test project in market
 		&nbsp;&nbsp;&nbsp;&nbsp;send messages to donors when they are again eligible for blood donation<br>
 		&nbsp;&nbsp;&nbsp;&nbsp;send messages to donors for staying healthy<br>
 	</ul>
+	
+<h2>Web Pages</h2>
+	<ul>
+		<li>Landing page</li>
+		<li>Signup 2 pages</li>
+		<li>Login page</li>
+		<li>Hosptal Dashboard</li>
+		<li>Blood bank Dashboard</li>
+	</ul>
+<h2>Functionalities</h2>
+	<ul>
+		<li>Request Blood</li>
+		<li>Loan Blood</li>
+		<li>Find Blood</li>
+		<li>Hosptal Dashboard</li>
+		<li>Request for Donors</li>
+	</ul>
