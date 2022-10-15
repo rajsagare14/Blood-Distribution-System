@@ -1,0 +1,169 @@
+html, body {
+    padding: 0px;
+	margin: 0px;
+	height: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	background: #fff;
+}
+h3{
+	font-family: Calibri; 
+	font-size: 25pt;         
+	font-style: normal; 
+	font-weight: bold; 
+	color:SlateBlue;
+	text-align: center; 
+	text-decoration: underline
+}
+table{
+    font-family: Calibri; 
+    color:white; 
+    font-size: 11pt; 
+    font-style: normal;
+    font-weight: bold;
+    background-color: SlateBlue; 
+    border-collapse: collapse; 
+    border: 2px solid navy
+}
+.CTA{
+    /* display: inline-block; */
+    width: 130px;
+    background-color: rgb(4, 170, 109);
+    color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    margin: 5px;
+    padding: 50px;
+}
+
+.image a{
+    font-size: 1.2em;
+}
+fieldset {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #C0C0C0;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+}
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+fieldset {
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: rgb(192, 192, 192);
+  border-image: initial;
+}
+.hospital-inputs-checkbox {
+    float: left;
+    width: 50%;
+}
+.hospital-inputs-checkbox span {
+    width: 33%;
+    float: left;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    justify-content: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    padding: 5px;
+}
+.hospital-inputs, .hospital-lable-text {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    justify-content: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    padding: 5px !important;
+}
+.hospital-inputs input[type="text"] {
+    width: 50%;
+    height: 30px;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    box-sizing: border-box;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+h3{
+	font-family: Calibri; 
+	font-size: 25pt;         
+	font-style: normal; 
+	font-weight: bold; 
+	color:SlateBlue;
+	text-align: center; 
+	text-decoration: underline
+}
+.text-center {
+    text-align: center;
+}
+.button {
+    border: solid 1px;
+    padding: 7px 10px;
+    background-color: #fa8620;
+    color: #fff;
+    float: left;
+    cursor: pointer;
+    /* margin: 10px 0px 10px 26px !important; */
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+input[type="submit" i] {
+    appearance: auto;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    color: buttontext;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
