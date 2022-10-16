@@ -32,12 +32,23 @@ function checkTheUserEmail($emailId){
 //Register User
 function registerUser($emailId , $password , $registrationNumber , $userType  ){
 /*
+ * user_id will auto generate.
  *
  * return true : if user is successfully created
  *
  * return false : if user is not created
  * */
 
+    $query = "insert into users (emailid,password,registration_number,user_type) values ('$emailId','$password','$registrationNumber','$userType')";
+    $result = mysqli_query($GLOBALS['con'],$query);
+    if($result){
+        return true;
+    }
 
+    return false;
+    /*
+     * function tested
+     * with variable emailid , password,  registration_number,user_type
+     * */
 }
 
