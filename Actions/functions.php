@@ -50,5 +50,7 @@ function registerUser($emailId , $password , $registrationNumber , $userType  ){
      * function tested
      * with variable emailid , password,  registration_number,user_type
      * */
+
+    
 }
 
