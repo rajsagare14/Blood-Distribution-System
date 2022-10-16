@@ -102,16 +102,16 @@
         <div class="hospital-all-text">
             <div class="hospital-lable-text">Health Care Provider Type:</div>
             <div class="hospital-inputs-checkbox test_archive">
-                        <span><input type="checkbox" name="hostipalcaretype" value="Hospital">Hospital</span>
-                        <span><input type="checkbox" name="hostipalcaretype" value="Dispensary">Dispensary</span>
-                        <span><input type="checkbox" name="hostipalcaretype" value="Community Health Centre">Community Health Centre</span>
-                        <span><input type="checkbox" name="hostipalcaretype" value="Nursing Home">Nursing Home</span>
-                        <span><input type="checkbox" name="hostipalcaretype" value="Medical College / Institute">Medical College / Institute</span>
-                        <span><input type="checkbox" name="hostipalcaretype" value="Sub Centre">Sub Centre</span>
-                        <span><input type="checkbox" name="hostipalcaretype" value="Poly Clinic">Poly Clinic</span>
-                        <span><input type="checkbox" name="hostipalcaretype" value="Primary Health Centre">Primary Health Centre</span>
-                        <span><input type="checkbox" name="hostipalcaretype" value="Others">Others</span>
-                        <span><input type="checkbox" name="hostipalcaretype" value="Clinic">Clinic</span>
+                        <span><input type="checkbox" name="hostipalcaretype[]" value="Hospital">Hospital</span>
+                        <span><input type="checkbox" name="hostipalcaretype[]" value="Dispensary">Dispensary</span>
+                        <span><input type="checkbox" name="hostipalcaretype[]" value="Community Health Centre">Community Health Centre</span>
+                        <span><input type="checkbox" name="hostipalcaretype[]" value="Nursing Home">Nursing Home</span>
+                        <span><input type="checkbox" name="hostipalcaretype[]" value="Medical College / Institute">Medical College / Institute</span>
+                        <span><input type="checkbox" name="hostipalcaretype[]" value="Sub Centre">Sub Centre</span>
+                        <span><input type="checkbox" name="hostipalcaretype[]" value="Poly Clinic">Poly Clinic</span>
+                        <span><input type="checkbox" name="hostipalcaretype[]" value="Primary Health Centre">Primary Health Centre</span>
+                        <span><input type="checkbox" name="hostipalcaretype[]" value="Others">Others</span>
+                        <span><input type="checkbox" name="hostipalcaretype[]" value="Clinic">Clinic</span>
         <span><input type="checkbox" name="hostipalcaretype" value="Others">Others</span>
         </div>
         </div>
