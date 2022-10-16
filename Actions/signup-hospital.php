@@ -2,7 +2,7 @@
 
 echo $_POST['hospitalname'];
 echo $_POST['hospitaltype'];
-echo $_POST['hospitalcaretype'];
+
 echo $_POST['hospitalregisnumber'];
 echo $_POST['Registrationnumberscan'];
 echo $_POST['nodalpersoninfo'];
@@ -17,7 +17,7 @@ echo $_POST['pincode'];
 
 $hospitalname = $_POST['hospitalname'];
 $hospitaltype = $_POST['hospitaltype'];
-$hospitalcaretype = $_POST['hospitalcaretype'];
+
 $hospitalregisnumber = $_POST['hospitalregisnumber'];
 $Registrationnumberscan = $_POST['Registrationnumberscan'];
 $nodalpersoninfo = $_POST['nodalpersoninfo'];
@@ -29,7 +29,7 @@ $subdistricttext = $_POST['subdistricttext'];
 $towntext = $_POST['towntext'];
 $villagetext = $_POST['villagetext'];
 $pincode = $_POST['pincode'];
-
+/*
 echo $hospitalname;
 echo $hospitaltype;
 echo $hospitalcaretype;
@@ -44,6 +44,15 @@ echo $subdistricttext;
 echo $towntext;
 echo $villagetext;
 echo $pincode;
+*/
 
+$hospitalcaretype = "";
+
+foreach($_POST['hostipalcaretype'] as $value){
+//    echo "value : ".$value.'<br/>';
+    $hospitalcaretype = $hospitalcaretype . $value . ", ";
+}
+
+echo $hospitalcaretype;
 
 ?>
