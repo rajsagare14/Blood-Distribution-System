@@ -27,3 +27,6 @@ To start contributing, follow the below guidelines:
 **9.** Click on `Create Pull Request`.
 
 **10.** Sit back patiently and relax while the project maintainers review your PR. Please understand, at times the time taken to review a PR can vary from a few hours to a few days.
+<h2>Creators</h2>
+<li>Rajwardhan Sagare</li>
+<li>Dhanraj Panchal</li>
