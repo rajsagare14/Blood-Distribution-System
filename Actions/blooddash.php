@@ -110,7 +110,7 @@
 </html> -->
 
 <?php
- include('session1.php');
+session_start();
 ?>
 <!DOCTYPE html>
 <html>

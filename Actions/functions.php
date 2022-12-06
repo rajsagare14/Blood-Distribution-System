@@ -8,9 +8,18 @@ include('connect.php');
 user related Codes
 */
 function addUserToTheDatabase(){
-	
+
 }
 
+function loginHospitalUser($username,$password){
+	$query = "select * from hosp_regis where username = '$username' and password = '$password';";
+	$result = mysqli_query($GLOBALS['conn'], $query);
+	$data = mysqli_fetch_all($result);
+	if ($data) {
+		return $data;
+	}
+	return false;
+}
 
 /*
 Functionality Codes

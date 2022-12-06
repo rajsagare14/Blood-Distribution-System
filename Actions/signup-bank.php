@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "connect.php";
 $bldbankName = $_POST['bldbankName'];
 $parentHospName = $_POST['parentHospName'];

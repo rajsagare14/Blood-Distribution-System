@@ -59,7 +59,7 @@ if($conn->query($signUpQuerry) == true){
 	$insert = true;
 	echo "
 <script>
-	alert('Registration successful')s
+	alert('Registration successful')
 	window.location='../Partials/login.php'
 </script>
 ";

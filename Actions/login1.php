@@ -1,8 +1,9 @@
 <?php
+session_start();
 echo $_POST['username'];
 echo $_POST['password'];
 include('connect.php');  
-session_start();
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 	// to prevent from mysqli injection  
