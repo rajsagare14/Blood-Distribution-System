@@ -2,6 +2,21 @@
 
 include('connect.php');
 
+
+
+/*
+user related Codes
+*/
+function addUserToTheDatabase(){
+	
+}
+
+
+/*
+Functionality Codes
+
+*/ 
+
 // Completed , but not checked and tested
 function addBloodStocks($identity, $name, $wbap, $wban, $wbbp, $wbbn, $wbabp, $wbabn, $wbop, $wbon, $plap, $plan, $plbp, $plbn, $plabp, $plabn, $plop, $plon, $pmap, $pman, $pmbp, $pmbn, $pmabp, $pmabn, $pmop, $pmon)
 {
