@@ -71,3 +71,27 @@ function addBloodStocks($identity, $name, $wbap, $wban, $wbbp, $wbbn, $wbabp, $w
 	}
 	return false;
 }
+
+function getBloodStockOnUsername($username){
+	/*
+
+		Info : 
+
+		params: 
+		
+		Query used:
+			SELECT * FROM `bloodstocks` WHERE name=(SELECT hospitalname from hosp_regis WHERE username='AsterAaadharKolhapur')
+		return : 
+			if username exits 
+				return the blood stock data
+			else
+				return false
+	*/
+	$query = "SELECT * FROM `bloodstocks` WHERE name=(SELECT hospitalname from hosp_regis WHERE username='$username')";
+	$result = mysqli_query($GLOBALS['conn'], $query);
+	$data = mysqli_fetch_all($result);
+	if ($data) {
+		return $data[0];
+	}
+	return false; 
+}

@@ -39,51 +39,61 @@ if (isset($_SESSION['organization'])) {
 					<th>AB+</th>
 					<th>AB+</th>
 				</tr>
-				<tr>
-					<th>whole Blood</th>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-				</tr>
-				<tr>
-					<th>Plasma</th>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-				</tr>
-				<tr>
-					<th>Platelets</th>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-					<td>0000</td>
-				</tr>
+				<!-- Getting data from database -->
+				<?php
 
+				$dataOfStock = getBloodStockOnUsername($_SESSION['organization']);
 
+					if(!$dataOfStock){
+						echo "No data found";
+					}else{
 
+					
 
+				?>
+				
 
+				
+				<?php
+					$count = 3;
+					
+					for($i=1;$i<4;$i++){
 
-				<!-- <button onclick="myFunction()">Try it</button> -->
+						echo  "</tr>";
+						if($i==1){
+							echo "<th>whole Blood</th>";
+						}else if($i==2){
+							echo "<th>Plasma</th>";
+						}else if($i===3){
+							echo "<th>Plateletes</th>";
+						}
 
-
+						echo "<td>$dataOfStock[$count]<td>";
+						$count=$count+1;
+						echo "<td>$dataOfStock[$count]<td>";
+						$count=$count+1;
+						echo "<td>$dataOfStock[$count]<td>";
+						$count=$count+1;
+						echo "<td>$dataOfStock[$count]<td>";
+						$count=$count+1;
+						echo "<td>$dataOfStock[$count]<td>";
+						$count=$count+1;
+						echo "<td>$dataOfStock[$count]<td>";
+						$count=$count+1;
+						echo "<td>$dataOfStock[$count]<td>";
+						$count=$count+1;
+						echo "<td>$dataOfStock[$count]<td>";
+						$count=$count+1;
+						echo  "</tr>";
+						
+					}
+				?>
+						<?php
+}
+						?>
 
 			</table>
-
+			
 			<form action="./orderblood.php" method="post">
 				<button>Order</button>
 			</form>
