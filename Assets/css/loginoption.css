@@ -1,0 +1,17 @@
+.CTA{
+	/* display: inline-block; */
+	width: 130px;
+	background-color: rgb(4, 170, 109);
+	color: white;
+	border-radius: 25px;
+	overflow: hidden;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	margin: 5px;
+	padding: 50px;
+}
+body{
+	margin-top: 400px;
+}

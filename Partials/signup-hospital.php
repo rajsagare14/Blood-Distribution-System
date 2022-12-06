@@ -71,7 +71,7 @@
     <fieldset>
         <legend><b>Information</b></legend>
         <span id="error-mess"></span>
-        <div class="hospital-all-text">
+        <div class=radiol-all-text">
             <div class="hospital-lable-text">Hospital Name&nbsp;<span style="color:red; font-weight:bold;">*</span></div>
             <div class="hospital-inputs">
                 <input id="hospitalname" name="hospitalname" type="text" onchange="Duplicatehpname('hospitalname');" onblur="validateHospitalName()" ;="" autocomplete="off">
@@ -101,18 +101,17 @@
 
         <div class="hospital-all-text">
             <div class="hospital-lable-text">Health Care Provider Type:</div>
-            <div class="hospital-inputs-checkbox test_archive">
-                        <span><input type="checkbox" name="hostipalcaretype[]" value="Hospital">Hospital</span>
-                        <span><input type="checkbox" name="hostipalcaretype[]" value="Dispensary">Dispensary</span>
-                        <span><input type="checkbox" name="hostipalcaretype[]" value="Community Health Centre">Community Health Centre</span>
-                        <span><input type="checkbox" name="hostipalcaretype[]" value="Nursing Home">Nursing Home</span>
-                        <span><input type="checkbox" name="hostipalcaretype[]" value="Medical College / Institute">Medical College / Institute</span>
-                        <span><input type="checkbox" name="hostipalcaretype[]" value="Sub Centre">Sub Centre</span>
-                        <span><input type="checkbox" name="hostipalcaretype[]" value="Poly Clinic">Poly Clinic</span>
-                        <span><input type="checkbox" name="hostipalcaretype[]" value="Primary Health Centre">Primary Health Centre</span>
-                        <span><input type="checkbox" name="hostipalcaretype[]" value="Others">Others</span>
-                        <span><input type="checkbox" name="hostipalcaretype[]" value="Clinic">Clinic</span>
-        <span><input type="checkbox" name="hostipalcaretype" value="Others">Others</span>
+            <div class="hospital-inputs-radio test_archive">
+                        <span><input type="radio" name="hospitalcaretype" value="Hospital" checked='checked'>Hospital</span>
+                        <span><input type="radio" name="hospitalcaretype" value="Dispensary">Dispensary</span>
+                        <span><input type="radio" name="hospitalcaretype" value="Community Health Centre">Community Health Centre</span>
+                        <span><input type="radio" name="hospitalcaretype" value="Nursing Home">Nursing Home</span>
+                        <span><input type="radio" name="hospitalcaretype" value="Medical College / Institute">Medical College / Institute</span>
+                        <span><input type="radio" name="hospitalcaretype" value="Sub Centre">Sub Centre</span>
+                        <span><input type="radio" name="hospitalcaretype" value="Poly Clinic">Poly Clinic</span>
+                        <span><input type="radio" name="hospitalcaretype" value="Primary Health Centre">Primary Health Centre</span>
+                            <span><input type="radio" name="hospitalcaretype" value="Clinic">Clinic</span>
+        <span><input type="radio" name="hospitalcaretype" value="Others">Others</span>
         </div>
         </div>
 
@@ -169,7 +168,7 @@
         <div class="hospital-all-text">
             <div class="hospital-lable-text">Address <span style="color:red; font-weight:bold;">*</span></div>
             <div class="hospital-inputs">
-                <textarea name="address" id="address" onblur="validateAddress()"></textarea>
+                <input name="address" id="address" type="text" onblur="validateAddress()">
                 <span id="error-mess07"></span>
             </div>
         </div>
@@ -179,77 +178,83 @@
             <div class="hospital-inputs">
                 <select id="state" name="state" onchange="binddrop(1);" onblur="validateState()">
                     <option value="">Select state</option>
-                                <option value="35">Andaman &amp; Nicobar Islands</option>
-                                <option value="28">Andhra Pradesh</option>
-                                <option value="12">Arunachal Pradesh</option>
-                                <option value="18">Assam</option>
-                                <option value="10">Bihar</option>
-                                <option value="4">Chandigarh</option>
-                                <option value="22">Chhatisgarh</option>
-                                <option value="26">Dadra &amp; Nagar Haveli</option>
-                                <option value="25">Daman &amp; Diu</option>
-                                <option value="7">Delhi</option>
-                                <option value="30">Goa</option>
-                                <option value="24">Gujarat</option>
-                                <option value="6">Haryana</option>
-                                <option value="2">Himachal Pradesh</option>
-                                <option value="1">Jammu and Kashmir</option>
-                                <option value="20">Jharkhand</option>
-                                <option value="29">Karnataka</option>
-                                <option value="32">Kerala</option>
-                                <option value="31">Lakshadweep</option>
-                                <option value="23">Madhya Pradesh</option>
-                                <option value="27">Maharashtra</option>
-                                <option value="14">Manipur</option>
-                                <option value="17">Meghalaya</option>
-                                <option value="15">Mizoram</option>
-                                <option value="13">Nagaland</option>
-                                <option value="21">Odisha</option>
-                                <option value="34">Puducherry</option>
-                                <option value="3">Punjab</option>
-                                <option value="8">Rajasthan</option>
-                                <option value="11">Sikkim</option>
-                                <option value="33">Tamil Nadu</option>
-                                <option value="36">Telangana</option>
-                                <option value="16">Tripura</option>
-                                <option value="9">Uttar Pradesh</option>
-                                <option value="5">Uttarakhand</option>
-                                <option value="19">West Bengal</option>
+                                <option value="Andaman & Nicobar Islands">Andaman &amp; Nicobar Islands</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhatisgarh">Chhatisgarh</option>
+                                <option value="Dadra & Nagar Haveli">Dadra &amp; Nagar Haveli</option>
+                                <option value="Daman & Diu">Daman &amp; Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
         </select>
         <span id="error-mess08"></span>
-        <input id="statetext" name="statetext" type="hidden" value="">
+        <!-- <input id="statetext" name="statetext" type="text" value=""> -->
         </div>
         </div>
 
         <div class="hospital-all-text">
             <div class="hospital-lable-text">District&nbsp;<span style="color:red; font-weight:bold;">*</span></div>
             <div class="hospital-inputs">
-                <select id="district" name="district" onchange="binddrop(2);" onblur="validateDistrict()">
+                <!-- <select id="district" name="district" onchange="binddrop(2);" onblur="validateDistrict()">
                     <option value="">Select district</option>
-                </select>
+                </select> -->
+                <!-- <textarea name="district" id="district" onblur="validateAddress()"></textarea> -->
+
                 <span id="error-mess09"></span>
-                <input id="districttext" name="districttext" type="hidden" value="">
+                <input id="districttext" name="districttext" type="text" value="">
             </div>
         </div>
 
         <div class="hospital-all-text">
             <div class="hospital-lable-text">Sub District&nbsp;</div>
             <div class="hospital-inputs">
-                <select id="subdristrict" name="subdristrict" onchange="binddrop(3);">
+                <!-- <select id="subdristrict" name="subdristrict" onchange="binddrop(3);">
                     <option value="">Select sub-district</option>
-                </select>
+                </select> -->
+                <!-- <textarea name="subdistrict" id="subdistrict" onblur="validateAddress()"></textarea> -->
                 <span id="error-mess10"></span>
-                <input id="subdristricttext" name="subdristricttext" type="hidden" value="">
+
+                <input id="subdistricttext" name="subdistricttext" type="text" value="">
             </div>
         </div>
 
         <div class="hospital-all-text">
             <div class="hospital-lable-text">Town</div>
             <div class="hospital-inputs">
-                <select id="town" name="town" onchange="binddrop(4);">
+                <!-- <select id="town" name="town" onchange="binddrop(4);">
                     <option value="">-select-</option>
-                </select>
-                <input id="towntext" name="towntext" type="hidden" value="">
+                </select> -->
+                <!-- <textarea name="town" id="town" onblur="validateAddress()"></textarea> -->
+
+                <input id="towntext" name="towntext" type="text" value="">
             </div>
         </div>
 
@@ -258,10 +263,12 @@
         <div class="hospital-all-text">
             <div class="hospital-lable-text">Village </div>
             <div class="hospital-inputs">
-                <select id="village" name="village">
+                <!-- <select id="village" name="village">
                     <option value="">-select-</option>
-                </select>
-                <input id="villagetext" name="villagetext" type="hidden" value="">
+                </select> -->
+                <!-- <textarea name="village" id="village" onblur="validateAddress()"></textarea> -->
+
+                <input id="villagetext" name="villagetext" type="text" value="">
             </div>
         </div>
 
@@ -274,6 +281,14 @@
         </div>
 
 
+    </fieldset>
+    <fieldset>
+        <legend><b>Create a username and password for registration</b></legend>
+        <label>Username<br></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+        <br>
+        <label>Password<br></label>
+        <input type="password" placeholder="Enter Password" name="password" required> 
     </fieldset>
         <div class="text-center">
             <input class="button" type="submit" value="Submit" onclick="return validateForm();">

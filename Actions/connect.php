@@ -1,11 +1,12 @@
 <?php
-$con = mysqli_connect("localhost","root","","BDS");
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "test";
 
-if(!$con){
-    echo '
-        <script> alert("Unable to connect to the database  ! Try later") </script>
-    ';
-    die(mysqli_error($con));
-}
-
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) 
+{
+ die("Connection failed: " . $conn->connect_error);
+} 
 ?>

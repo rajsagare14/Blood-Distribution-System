@@ -1,41 +1,56 @@
 <?php
-echo $_POST['hospCity'];
-$hospCity = $_POST['hospCity'];
-echo $_POST['bldbankName'];
+require "connect.php";
 $bldbankName = $_POST['bldbankName'];
-echo $_POST['parentHospName'];
 $parentHospName = $_POST['parentHospName'];
-echo $_POST['hospShortName'];
-$hospShortName = $_POST['hospShortName'];
-echo $_POST['contactPerson'];
+$hospType = $_POST['hospType'];
 $contactPerson = $_POST['contactPerson'];
-echo $_POST['hospEmail'];
 $hospEmail = $_POST['hospEmail'];
-echo $_POST['hospContact'];
-$hospContac = $_POST['hospContact'];
-echo $_POST['hospFax'];
-$hospFax = $_POST['hospFax'];
-echo $_POST['licenceNo'];
+$hospContact = $_POST['hospContact'];
 $licenceNo= $_POST['licenceNo'];
-echo $_POST['licenceFromDate'];
 $licenceFromDate= $_POST['licenceFromDate'];
-echo $_POST['licenceToDate'];
 $licenceToDate= $_POST['licenceToDate'];
-echo $_POST['helplineNo'];
+$componentFacility= $_POST['componentFacility'];
+$capheresisFacility= $_POST['apheresisFacility'];
 $helplineNo= $_POST['helplineNo'];
-echo $_POST['hospAdd1'];
-$hospAdd1= $_POST['hospAdd1'];
-echo $_POST['hospAdd2'];
-$hospAdd2= $_POST['hospAdd2'];
-echo $_POST['pincode'];
-$pincode= $_POST['pincode'];
-echo $_POST['hospLatitude'];
-$hospLatitude= $_POST['hospLatitude'];
-echo $_POST['hospLongitude'];
-$hospLongitude= $_POST['hospLongitude'];
-echo $_POST['hospWebsite'];
-$hospWebsite= $_POST['hospWebsite'];
-echo $_POST['noOfBed'];
-$noOfBed= $_POST['noOfBed'];
+$address = $_POST['address'];
+$statetext = $_POST['state'];
+$districttext = $_POST['districttext'];
+$subdistricttext = $_POST['subdistricttext'];
+$towntext = $_POST['towntext'];
+$villagetext = $_POST['villagetext'];
+$pincode = $_POST['pincode'];
+
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+echo $bldbankName;
+echo $parentHospName;
+echo $hospType;
+echo $contactPerson;
+echo $hospEmail;
+echo $hospContact;
+echo $licenceNo;
+echo $licenceFromDate;
+echo $licenceToDate;
+echo $componentFacility;
+echo $helplineNo;
+echo $statetext;
+echo $districttext;
+echo $subdistricttext;
+echo $towntext;
+echo $villagetext;
+echo $pincode;
+echo $address;
+echo $username;
+echo $password;
+
+$signUpQuerry = "INSERT INTO `bank_regis` (`username`, `password`, `bldbankName`, `hospType`, `contactPerson`, `hospEmail`, `hospContact`, `licenceNo`, `helplineNo`, `statetext`, `districttext`, `subdistricttext`, `towntext`, `villagetext`, `pincode`, `address`) VALUES ('$username', '$password', '$bldbankName', '$hospType', '$contactPerson', '$hospEmail', '$hospContact', '$licenceNo', '$helplineNo', '$statetext', '$districttext', '$subdistricttext', '$towntext', '$villagetext', '$pincode', '$address');";
+
+if($conn->query($signUpQuerry) == true){
+	$insert = true;
+}
+else{
+	echo "ERROR: Failed to insert into data base: <br>$conn->error";
+}
 
 ?>

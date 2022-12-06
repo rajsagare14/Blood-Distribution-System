@@ -18,7 +18,7 @@ include("./Actions/connect.php");
 		<h1 id="blood-distribution-system">Blood Distribution System</h1>
 		<div class="topnav1">
 			<!-- <div class="buttons"> -->
-				<a class="CTA" id="login-button" href="./Partials/login.php">Login</a>
+				<a class="CTA" id="login-button" href="./Partials/loginoption.html">Login</a>
 				<a id="signup-button" href="./Partials/signup.php">Sign Up</a>
 			<!-- </div> -->
 		</div>
@@ -32,7 +32,7 @@ include("./Actions/connect.php");
 	<div class="image" style="width: 100%;margin-left: 350px ;margin-top: 0px; padding-bottom: 270px;"><img src="./Assets/Images/homeimg1.jpg" alt="Random Image" id="homeimg"></div>
 	<div class="image" style="margin-top:-550px;padding-bottom:270px;">
 		<a class="CTA" href="./Partials/login.php" style="margin-left: 35px;">I Am a Hospital</a>
-		<a class="CTA" href="./Partials/login.php" style="margin-left: 965px;">I Am a Blood Bank</a>
+		<a class="CTA" href="./Partials/login1.php" style="margin-left: 965px;">I Am a Blood Bank</a>
 	</div>
 	<!-- <div class="image" style="width: 25%;"></div> -->
 	<div id="home">
