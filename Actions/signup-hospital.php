@@ -57,6 +57,12 @@ echo $password;
 $signUpQuerry = "INSERT INTO `hosp_regis` (`username`,`password`,`hospitalname`, `hospitaltype`, `hospitalcaretype`, `hospitalregisnumber`, `nodalpersoninfo`, `nodalpersontele`, `nodalpersonemailid`, `statetext`, `districttext`, `subdistricttext`, `towntext`, `villagetext`, `pincode`, `address`) VALUES ('$username','$password','$hospitalname', '$hospitaltype', '$hospitalcaretype', '$hospitalregisnumber', '$nodalpersoninfo', '$nodalpersontele', '$nodalpersonemailid', '$statetext', '$districttext', '$subdistricttext', '$towntext', '$villagetext', '$pincode', '$address');";
 if($conn->query($signUpQuerry) == true){
 	$insert = true;
+	echo "
+<script>
+	alert('Registration successful')s
+	window.location='../Partials/login.php'
+</script>
+";
 }
 else{
 	echo "ERROR: Failed to insert into data base: <br>$conn->error";
