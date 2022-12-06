@@ -84,8 +84,9 @@ if (isset($_SESSION['organization'])) {
 
 			</table>
 
-
-			<button> <a href="../Actions/logout.php">Logout</a> </button>
+			<form action="./orderblood.php" method="post">
+				<button>Order</button>
+			</form>
 </body>
 
 </html>
