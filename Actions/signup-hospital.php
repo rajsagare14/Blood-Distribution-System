@@ -70,5 +70,9 @@ if($conn->query($initalStocks) == true){
 else{
 	echo "ERROR: Failed to insert into data base: <br>$conn->error";
 }
+echo"<script>
+alert('Signup successful')
+window.location='../'
+</script>";
 
 ?>
