@@ -55,14 +55,17 @@ echo $username;
 echo $password;
 
 $signUpQuerry = "INSERT INTO `hosp_regis` (`username`,`password`,`hospitalname`, `hospitaltype`, `hospitalcaretype`, `hospitalregisnumber`, `nodalpersoninfo`, `nodalpersontele`, `nodalpersonemailid`, `statetext`, `districttext`, `subdistricttext`, `towntext`, `villagetext`, `pincode`, `address`) VALUES ('$username','$password','$hospitalname', '$hospitaltype', '$hospitalcaretype', '$hospitalregisnumber', '$nodalpersoninfo', '$nodalpersontele', '$nodalpersonemailid', '$statetext', '$districttext', '$subdistricttext', '$towntext', '$villagetext', '$pincode', '$address');";
+$initalStocks = "INSERT INTO `bloodstocks` (`identity`, `name`, `wbap`, `wban`, `wbbp`, `wbbn`, `wbabp`, `wbabn`, `wbop`, `wbon`, `plap`, `plan`, `plbp`, `plbn`, `plabp`, `plabn`, `plop`, `plon`, `pmap`, `pman`, `pmbp`, `pmbn`, `pmabp`, `pmabn`, `pmop`, `pmon`) VALUES ('hospital', '$hospitalname', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');";
 if($conn->query($signUpQuerry) == true){
 	$insert = true;
-	echo "
-<script>
-	alert('Registration successful')
-	window.location='../Partials/login.php'
-</script>
-";
+	echo "";
+}
+else{
+	echo "ERROR: Failed to insert into data base: <br>$conn->error";
+}
+if($conn->query($initalStocks) == true){
+	$insert = true;
+	echo "";
 }
 else{
 	echo "ERROR: Failed to insert into data base: <br>$conn->error";

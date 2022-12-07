@@ -1,3 +1,18 @@
+<?php
+session_start();
+include('../Actions/functions.php');
+$loggedin_organization_name = null;
+if (isset($_SESSION['organization'])) {
+	$loggedin_organization_name = $_SESSION['organization'];
+} else {
+	echo "
+		<script>
+			alert('Login needed. if issue continues try by changing the browser')
+			window.location='./login.php'
+		</script>
+		";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +23,7 @@
     <title>Update Stocks</title>
 </head>
 <body>
+<!-- <form action="../Actions/updatestocks.php" method="post">
     <table>
         <tr>
             <th></th>
@@ -53,13 +69,37 @@
             <td><input name="plop" type="number" class="myNumber"></td>
             <td><input name="plon" type="number" class="myNumber"></td>
         </tr>
-	</form>
-</table>
-<form action="./../Actions/updatestocks.php" method="post">
+	</table>
 	<button>Update Stocks</button>
-</form>
-<form action="../Actions/orderblood.php" method="post">
+</form> -->
+
+<h1>Update the Blood Stocks</h1>
+	<form action="../Actions/updatestocks.php" method="post">
 		<!-- to get the stocks updated -->
+		<select name="type">
+			<option value="wb">Whole Blood</option>
+			<option value="pm">Plasma</option>
+			<option value="pl">Platelet</option>
+
+		</select>
+		<select name="bloodgroup">
+			<option value="ap">A +ve</option>
+			<option value="an">A -ve</option>
+			<option value="bp">B +ve</option>
+			<option value="bn">B -ve</option>
+			<option value="abp">AB +ve</option>
+			<option value="abn">AB -ve</option>
+			<option value="op">O +ve</option>
+			<option value="on">O -ve</option>
+
+		</select>
+		<!-- to get stocks updated -->
+		<input type="text" name="quantity" placeholder="Enter the Quantity">
+		<button>Update</button>
+		<br>
+		<br>
+		<br>
+	</form>
 <script>
 function myFunction() {
   document.getElementsByClassName("myNumber").stepUp(5);

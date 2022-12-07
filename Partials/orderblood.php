@@ -9,30 +9,26 @@
 <body>
 	<h1>Order the Blood</h1>
 	<form action="../Actions/orderblood.php" method="post">
-		<!-- to get the type -->
-		<select name="type">
-			<option value="wholeblood">Whole Blood</option>
-			<option value="plasma">Plasma</option>
-			<option value="platelet">Platelet</option>
-
-		</select>
-		<!-- Get Quantity -->
-		<input type="text" name="quantity" placeholder="Enter the Quantity">
-		<button>Order</button>
-		<br>
-		<br>
-		<br>
-	</form>
-	<form action="../Actions/orderblood.php" method="post">
 		<!-- to get the stocks updated -->
 		<select name="type">
-			<option value="wholeblood">Whole Blood</option>
-			<option value="plasma">Plasma</option>
-			<option value="platelet">Platelet</option>
+			<option value="wb">Whole Blood</option>
+			<option value="pm">Plasma</option>
+			<option value="pl">Platelet</option>
+
+		</select>
+		<select name="bloodgroup">
+			<option value="ap">A +ve</option>
+			<option value="an">A -ve</option>
+			<option value="bp">B +ve</option>
+			<option value="bn">B -ve</option>
+			<option value="abp">AB +ve</option>
+			<option value="abn">AB -ve</option>
+			<option value="op">O +ve</option>
+			<option value="on">O -ve</option>
 
 		</select>
 		<!-- to get stocks updated -->
-		<input type="text" name="quantity" placeholder="Enter the Quantity">
+		<input type="number" name="quantity" placeholder="Enter the Quantity">
 		<button>Order</button>
 		<br>
 		<br>
