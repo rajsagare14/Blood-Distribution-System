@@ -16,7 +16,7 @@ $query = "";
 
 //select * from bloodbanks where pincode like '$pinfirsttowdigit____'
 
-// Order Blood Table
+// Order Blood Table(for blood bank and hospital both)(request sent to blood banks only)
 // id hospitalname  product quantity orderfrom status     Timestamp
 // 1  'hospitalnae' 'wbabp' 200		bank name 	pending		currtime
 // 2  'hospitalnae' 'wbabp' 200		bank name 	approved	currtime

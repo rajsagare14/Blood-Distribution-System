@@ -98,7 +98,7 @@ if (isset($_SESSION['organization'])) {
 			<form action="./orderblood.php" method="post">
 				<button>Order</button>
 			</form>
-			<form action="./updatestocks.php" method="post">
+			<form action="./updatestocks1.php" method="post">
 				<button>Update Stocks</button>
 			</form>
 </body>
