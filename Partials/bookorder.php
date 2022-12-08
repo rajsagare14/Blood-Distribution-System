@@ -71,8 +71,7 @@ $quantity=$_SESSION['quantity'];
 				<td>
 					<form action="../Actions/bookorder.php" method="post">
 						<input type="hidden" name="id" value="<?php echo $dataofBlood[$i][0]; ?>">
-						<input type="hidden" name="colname" value="<?php echo $colname; ?>">
-						<input type="hidden" name="quantity" value="<?php echo $quantity; ?>">
+						<input type="hidden" name="bankname" value="<?php echo $dataofBlood[$i][1];  ?>">
 						<button>Place Order</button>
 
 					</form>

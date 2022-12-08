@@ -127,6 +127,20 @@ function getBloodBankStockOnUsername($username){
 	}
 	return false; 
 }
-function getBloodDetails(){
+function placeorderFromHospitalToBloodBank($organisationname,$colname,$quantity,$orderedfrom){
+	/*
 	
+	
+	$query = "INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$loggedin_organization_name', '$colname', '$quantity', '$orderfrombldbankName', 'pending', current_timestamp());";
+
+	*/
+
+	$query = "INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$organisationname', '$colname', '$quantity', '$orderedfrom', 'pending', current_timestamp());";
+	$result = mysqli_query($GLOBALS['conn'], $query);
+	if ($result) {
+		return true;
+	}
+	return false;
+
+
 }
