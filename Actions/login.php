@@ -17,12 +17,13 @@ if(!$data){
 
 
 $_SESSION['organization']=$username;
-
+$_SESSION['pincode']=$data[0];
+$pincode=$_SESSION['pincode'];
 
 $userid = $_SESSION['organization'];
 echo "
 	<script>
-		alert('Login success $userid')
+		alert('Login success $userid,$pincode')
 		window.location='../Partials/hospitaldashboard.php'
 	</script>
 	";

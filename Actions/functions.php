@@ -12,11 +12,11 @@ function addUserToTheDatabase(){
 }
 
 function loginHospitalUser($username,$password){
-	$query = "select * from hosp_regis where username = '$username' and password = '$password';";
+	$query = "select pincode from hosp_regis where username = '$username' and password = '$password';";
 	$result = mysqli_query($GLOBALS['conn'], $query);
 	$data = mysqli_fetch_all($result);
 	if ($data) {
-		return $data;
+		return $data[0];
 	}
 	return false;
 }

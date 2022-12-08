@@ -15,6 +15,10 @@ if (isset($_SESSION['organization'])) {
 $typeBlood = $_POST['type'];
 $bloodgroup = $_POST['bloodgroup'];
 $quantity = $_POST['quantity'];
+$pincode = $_SESSION['pincode'];
+$areacode = substr($pincode,0,4);
+$areacode=$areacode."__";
+
 // echo $typeBlood;
 echo "<br>";
 // echo $bloodgroup;
@@ -26,7 +30,7 @@ $colname = "$typeBlood"."$bloodgroup";
 echo"<br>";
 // $query = "INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$loggedin_organization_name', '$colname', '$quantity', '$orderfrombldbankName', 'pending', current_timestamp());";
 // echo"$query";
-$searchblood = "SELECT id,name,$colname FROM `bloodstocks` WHERE (`$colname`>0 and `identity` LIKE \"blood bank\")";
+$searchblood = "SELECT id,name,$colname FROM `bloodstocks` WHERE (`$colname`>0 and `identity` LIKE 'blood bank' and `pincode` LIKE '$areacode')";
 
 if ($result = mysqli_query($conn,$searchblood)) {
 	$data = mysqli_fetch_all($result);
@@ -35,6 +39,7 @@ if ($result = mysqli_query($conn,$searchblood)) {
 	$_SESSION['quantity']=$quantity;
 	echo "
 		<script>
+		alert('$areacode')
 			window.location='../Partials/bookorder.php'
 		</script>
 	";

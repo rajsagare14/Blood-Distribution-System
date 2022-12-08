@@ -64,9 +64,9 @@ if (isset($_SESSION['organization'])) {
 						if($i==1){
 							echo "<th scope = \"row\">whole Blood</th>";
 						}else if($i==2){
-							echo "<th scope = \"row\">Plasma</th>";
-						}else if($i==3){
 							echo "<th scope = \"row\">Plateletes</th>";
+						}else if($i==3){
+							echo "<th scope = \"row\">Plasma</th>";
 						}
 
 						echo "<td>$dataOfStock[$count]</td>";
@@ -101,6 +101,9 @@ if (isset($_SESSION['organization'])) {
 			<form action="./updatestocks.php" method="post">
 				<button>Update Stocks</button>
 			</form>
-</body>
+
+
+			<a href="../Actions/logout.php"> <button>logout</button> </a>
+</body>	
 
 </html>
