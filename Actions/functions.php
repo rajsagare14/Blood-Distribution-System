@@ -127,3 +127,6 @@ function getBloodBankStockOnUsername($username){
 	}
 	return false; 
 }
+function getBloodDetails(){
+	
+}

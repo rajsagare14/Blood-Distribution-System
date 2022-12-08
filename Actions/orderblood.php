@@ -26,29 +26,20 @@ $colname = "$typeBlood"."$bloodgroup";
 echo"<br>";
 // $query = "INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$loggedin_organization_name', '$colname', '$quantity', '$orderfrombldbankName', 'pending', current_timestamp());";
 // echo"$query";
-$searchblood = "SELECT * FROM `bloodstocks` WHERE (`$colname`>0 and `identity` LIKE \"blood bank\")";
+$searchblood = "SELECT id,name,$colname FROM `bloodstocks` WHERE (`$colname`>0 and `identity` LIKE \"blood bank\")";
 
 if ($result = mysqli_query($conn,$searchblood)) {
-	echo "<table>";
-	echo "<tr>";
-	echo "<th>id</th>";
-	echo "<th>Blood Bank Name</th>";
-	echo "<th>$colname</th>";
-	echo "</tr>";
-	
-	while($row = $result->fetch_array(MYSQLI_ASSOC)){
-		$row_id = $row['id'];
-		$row_name = $row['name'];
-		echo "<tr>";
-		echo "<td>$row_id</td>";
-		echo "<td>$row_name</td>";
-		echo "<td>$row[$colname]</td>";
-		echo "<td><button>Place Order</button></td>";
-		echo "</tr>";
-	}
-	echo "</table>" ;
-	echo "<br>" ;
+	$data = mysqli_fetch_all($result);
+	$_SESSION['blooddata'] = $data;
+	$_SESSION['bloodcolname']=$colname;
+	$_SESSION['quantity']=$quantity;
+	echo "
+		<script>
+			window.location='../Partials/bookorder.php'
+		</script>
+	";
 }
+$query = "INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$loggedin_organization_name', '$colname', '$quantity', '$orderfrombldbankName', 'pending', current_timestamp());";
 // Amazing search algorithm
 // SELECT * FROM `bloodstocks` WHERE `pincode` LIKE "4160__";
 // INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$hospitalname', '$colname', '$quantity', 'Kazi bank of blood', 'pending', current_timestamp());

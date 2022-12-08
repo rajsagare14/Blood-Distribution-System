@@ -1,0 +1,91 @@
+<?php
+session_start();
+include('../Actions/functions.php');
+$loggedin_organization_name = null;
+if (isset($_SESSION['organization'])) {
+	$loggedin_organization_name = $_SESSION['organization'];
+} else {
+	echo "
+		<script>
+			alert('Login needed. if issue continues try by changing the browser')
+			window.location='./login.php'
+		</script>
+		";
+}
+
+if(!isset($_SESSION['blooddata']) && !isset($_SESSION['quantity'])){
+	echo "
+		<script>
+			alert('Error occurred , Please try again')
+			window.location='../Actions/logout.php'
+		</script>
+		";
+}
+
+$dataofBlood = $_SESSION['blooddata'];
+$colname = $_SESSION['bloodcolname'];
+$quantity=$_SESSION['quantity'];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book Blood</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Blood bank Name</th>
+			<th><?php echo $colname; ?></th>
+			<th>Operation</th>
+		</tr>
+
+		<?php
+
+		for($i=0;$i<count($dataofBlood);$i++){
+				echo "<tr>";
+				?>
+				<td>
+					<?php echo $dataofBlood[$i][0]; ?>
+				</td>
+				<?php
+				
+				?>
+				<td>
+					<?php echo $dataofBlood[$i][1]; ?>
+				</td>
+				<?php
+				
+				?>
+				<td>
+					<?php echo $dataofBlood[$i][0]; ?>
+				</td>
+				<?php
+				
+				?>
+				<td>
+					<form action="../Actions/bookorder.php" method="post">
+						<input type="hidden" name="id" value="<?php echo $dataofBlood[$i][0]; ?>">
+						<input type="hidden" name="colname" value="<?php echo $colname; ?>">
+						<input type="hidden" name="quantity" value="<?php echo $quantity; ?>">
+						<button>Place Order</button>
+
+					</form>
+				</td>
+
+				<tr></tr>
+				<?php
+
+				
+		}
+
+?>
+	</table>
+
+</body>
+</html>
