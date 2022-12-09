@@ -74,15 +74,15 @@ $quantity = $_SESSION['quantity'];
 				<form action="../Actions/bookorder.php" method="post">
 					<input type="hidden" name="id" value="<?php echo $dataofBlood[$i][0]; ?>">
 					<input type="hidden" name="bankname" value="<?php echo $dataofBlood[$i][1];  ?>">
+					<input type="hidden" name="identity" value="<?php echo $dataofBlood[$i][3];  ?>">
 					<button>Place Order</button>
-
+					
 				</form>
 			</td>
-		<?php
+			<?php
 		}
 		?>
 	</table>
-
 </body>
 
 </html>

@@ -2,8 +2,10 @@
 session_start();
 include('../Actions/functions.php');
 $loggedin_organization_name = null;
+$identity = $_SESSION['identity'];
 if (isset($_SESSION['organization'])) {
 	$loggedin_organization_name = $_SESSION['organization'];
+	echo $identity;
 } else {
 	echo "
 		<script>

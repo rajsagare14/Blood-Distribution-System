@@ -30,7 +30,7 @@ $colname = "$typeBlood"."$bloodgroup";
 echo"<br>";
 // $query = "INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$loggedin_organization_name', '$colname', '$quantity', '$orderfrombldbankName', 'pending', current_timestamp());";
 // echo"$query";
-$searchblood = "SELECT id,name,$colname,identity FROM `bloodstocks` WHERE (`$colname`>$quantity and `identity` LIKE 'blood bank' and `pincode` LIKE '$areacode')";
+$searchblood = "SELECT id,name,$colname FROM `bloodstocks` WHERE (`$colname`>$quantity and `identity` LIKE 'blood bank' and `pincode` LIKE '$areacode')";
 
 if ($result = mysqli_query($conn,$searchblood)) {
 	$data = mysqli_fetch_all($result);
@@ -40,7 +40,7 @@ if ($result = mysqli_query($conn,$searchblood)) {
 	echo "
 		<script>
 		alert('$areacode')
-			window.location='../Partials/bookorder.php'
+			window.location='../Partials/bookorder1.php'
 		</script>
 	";
 }

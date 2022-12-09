@@ -19,11 +19,12 @@ if(!$data){
 $_SESSION['organization']=$username;
 $_SESSION['pincode']=$data[0];
 $pincode=$_SESSION['pincode'];
-
 $userid = $_SESSION['organization'];
+$identity = 'blood bank';
+$_SESSION['identity']=$identity;
 echo "
 	<script>
-		alert('Login success $userid,$pincode')
+		alert('Login success $userid,$pincode,$identity')
 		window.location='../Partials/bloodbankdashboard.php'
 	</script>
 	";

@@ -19,11 +19,13 @@ if(!$data){
 $_SESSION['organization']=$username;
 $_SESSION['pincode']=$data[0];
 $pincode=$_SESSION['pincode'];
+$identity = 'hospital';
+$_SESSION['identity']= $identity;
 
 $userid = $_SESSION['organization'];
 echo "
 	<script>
-		alert('Login success $userid,$pincode')
+		alert('Login success $userid,$pincode,$identity')
 		window.location='../Partials/hospitaldashboard.php'
 	</script>
 	";
