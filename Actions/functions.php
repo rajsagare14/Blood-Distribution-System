@@ -21,11 +21,11 @@ function loginHospitalUser($username,$password){
 	return false;
 }
 function loginBloodBankUser($username,$password){
-	$query = "select * from bank_regis where username = '$username' and password = '$password';";
+	$query = "select pincode from bank_regis where username = '$username' and password = '$password';";
 	$result = mysqli_query($GLOBALS['conn'], $query);
 	$data = mysqli_fetch_all($result);
 	if ($data) {
-		return $data;
+		return $data[0];
 	}
 	return false;
 }
@@ -128,6 +128,23 @@ function getBloodBankStockOnUsername($username){
 	return false; 
 }
 function placeorderFromHospitalToBloodBank($organisationname,$colname,$quantity,$orderedfrom){
+	/*
+	
+	
+	$query = "INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$loggedin_organization_name', '$colname', '$quantity', '$orderfrombldbankName', 'pending', current_timestamp());";
+
+	*/
+
+	$query = "INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$organisationname', '$colname', '$quantity', '$orderedfrom', 'pending', current_timestamp());";
+	$result = mysqli_query($GLOBALS['conn'], $query);
+	if ($result) {
+		return true;
+	}
+	return false;
+
+
+}
+function placeorderFromBloodBankToBloodBank($organisationname,$colname,$quantity,$orderedfrom){
 	/*
 	
 	

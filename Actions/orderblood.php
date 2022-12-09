@@ -30,7 +30,7 @@ $colname = "$typeBlood"."$bloodgroup";
 echo"<br>";
 // $query = "INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$loggedin_organization_name', '$colname', '$quantity', '$orderfrombldbankName', 'pending', current_timestamp());";
 // echo"$query";
-$searchblood = "SELECT id,name,$colname FROM `bloodstocks` WHERE (`$colname`>0 and `identity` LIKE 'blood bank' and `pincode` LIKE '$areacode')";
+$searchblood = "SELECT id,name,$colname FROM `bloodstocks` WHERE (`$colname`>$quantity and `identity` LIKE 'blood bank' and `pincode` LIKE '$areacode')";
 
 if ($result = mysqli_query($conn,$searchblood)) {
 	$data = mysqli_fetch_all($result);
@@ -55,4 +55,3 @@ $query = "INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, 
 // 1  'hospitalnae' 'wbabp' 200		bank name 	pending		currtime
 // 2  'hospitalnae' 'wbabp' 200		bank name 	approved	currtime
 // 3  'hospitalnae' 'wbabp' 200		bank name 	rejected	currtime
-?>
