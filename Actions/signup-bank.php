@@ -46,7 +46,7 @@ echo $username;
 echo $password;
 
 $signUpQuerry = "INSERT INTO `bank_regis` (`username`, `password`, `bldbankName`, `hospType`, `contactPerson`, `hospEmail`, `hospContact`, `licenceNo`, `helplineNo`, `statetext`, `districttext`, `subdistricttext`, `towntext`, `villagetext`, `pincode`, `address`) VALUES ('$username', '$password', '$bldbankName', '$hospType', '$contactPerson', '$hospEmail', '$hospContact', '$licenceNo', '$helplineNo', '$statetext', '$districttext', '$subdistricttext', '$towntext', '$villagetext', '$pincode', '$address');";
-$initalStocks = "INSERT INTO `bloodstocks` (`identity`, `name`, `wbap`, `wban`, `wbbp`, `wbbn`, `wbabp`, `wbabn`, `wbop`, `wbon`, `plap`, `plan`, `plbp`, `plbn`, `plabp`, `plabn`, `plop`, `plon`, `pmap`, `pman`, `pmbp`, `pmbn`, `pmabp`, `pmabn`, `pmop`, `pmon`) VALUES ('blood bank', '$bldbankName', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0');";
+$initalStocks = "INSERT INTO `bloodstocks` (`identity`, `name`, `wbap`, `wban`, `wbbp`, `wbbn`, `wbabp`, `wbabn`, `wbop`, `wbon`, `plap`, `plan`, `plbp`, `plbn`, `plabp`, `plabn`, `plop`, `plon`, `pmap`, `pman`, `pmbp`, `pmbn`, `pmabp`, `pmabn`, `pmop`, `pmon`) VALUES ('blood bank', '$bldbankName', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0','$pincode');";
 
 if($conn->query($signUpQuerry) == true){
 	$insert = true;
@@ -60,5 +60,8 @@ if($conn->query($initalStocks) == true){
 else{
 	echo "ERROR: Failed to insert into data base: <br>$conn->error";
 }
-
+echo"<script>
+alert('Signup successful')
+window.location='../'
+</script>";
 ?>

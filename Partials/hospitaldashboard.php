@@ -5,7 +5,7 @@ $loggedin_organization_name = null;
 $identity = $_SESSION['identity'];
 if (isset($_SESSION['organization'])) {
 	$loggedin_organization_name = $_SESSION['organization'];
-	echo $identity;
+	// echo $identity;
 } else {
 	echo "
 		<script>

@@ -78,7 +78,7 @@ $quantity = $_SESSION['quantity'];
 					<button>Place Order</button>
 					
 				</form>
-			</td>
+			</td> 	
 			<?php
 		}
 		?>
