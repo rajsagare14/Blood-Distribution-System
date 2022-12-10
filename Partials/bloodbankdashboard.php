@@ -102,6 +102,9 @@ if (isset($_SESSION['organization'])) {
 			<form action="./updatestocks1.php" method="post">
 				<button>Update Stocks</button>
 			</form>
+			<form action="./vieworders1.php" method="post">
+				<button>View Orders</button>
+			</form>
 			<a href="../Actions/logout.php"> <button>logout</button> </a>
 </body>
 
