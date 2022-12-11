@@ -85,6 +85,10 @@ $dataofBlood = $_SESSION['blooddata'];
 			<td>
 				<form action="../Actions/vieworders1.php" method="post">
 					<input type="hidden" name="id" value="<?php echo $dataofBlood[$i][0]; ?>">
+					<input type="hidden" name="organizationname" value="<?php echo $dataofBlood[$i][1]; ?>">
+					<input type="hidden" name="product" value="<?php echo $dataofBlood[$i][2]; ?>">
+					<input type="hidden" name="quantity" value="<?php echo $dataofBlood[$i][3]; ?>">
+					<input type="hidden" name="orderedfrom" value="<?php echo $dataofBlood[$i][4]; ?>">
 					<select name="orderstatus">
 			<option value="pending">Pending</option>
 			<option value="accepted">Accept</option>

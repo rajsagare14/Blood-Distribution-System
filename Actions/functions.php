@@ -161,3 +161,21 @@ function placeorderFromBloodBankToBloodBank($organisationname,$colname,$quantity
 
 
 }
+function ordersFromHospital($organisationname){
+	/*
+	
+	
+	$query = "INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$loggedin_organization_name', '$colname', '$quantity', '$orderfrombldbankName', 'pending', current_timestamp());";
+
+	*/
+
+	$query = "SELECT * FROM `order_blood` where `organizationname` like '$organisationname'";
+	$result = mysqli_query($GLOBALS['conn'], $query);
+	$data = mysqli_fetch_all($result);
+	if ($data) {
+		return $data[0];
+	}
+	return false;
+
+
+}
