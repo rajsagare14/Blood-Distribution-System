@@ -2,7 +2,7 @@ body {
 	font-family: "Lato", sans-serif;
  }
   div{
-	display: inline-block;
+	display: block;
   }
   .sidebar {
 	height: 100%;
@@ -212,4 +212,8 @@ input{
     line-height: 20px;
     width: 100%;
     background-color: rgb(54 27 137 / 10%);
+}
+form,fieldset{
+	display: block;
+	/* align-items: center; */
 }

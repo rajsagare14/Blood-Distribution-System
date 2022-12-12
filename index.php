@@ -37,15 +37,19 @@ include("./Actions/connect.php");
 	<!-- <div class="image" style="width: 25%;"></div> -->
 	<div id="home">
 		<H2>Home</H2>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum inventore dicta enim, corrupti tenetur debitis provident. Sit, nostrum voluptatem! Earum, quaerat obcaecati. Aperiam sint quia amet libero aliquam reprehenderit eveniet, sed, ea nihil corporis ut ipsam aut consequatur vitae eligendi praesentium enim. Corrupti in error, rerum saepe sint explicabo dolorem optio alias inventore asperiores, minus unde aliquam voluptatum eveniet est totam expedita qui tenetur vel laboriosam nesciunt sed minima omnis! Unde corporis a non ducimus asperiores, reprehenderit pariatur exercitationem architecto soluta eveniet nostrum voluptatum doloremque quo sunt? Magnam vero minus accusamus, ex voluptatum adipisci corrupti excepturi iste? Nisi ullam vitae blanditiis recusandae dignissimos saepe error.
+	
 	</div>
 		<div id="about">
 			<h2>About Us</h2>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum inventore dicta enim, corrupti tenetur debitis provident. Sit, nostrum voluptatem! Earum, quaerat obcaecati. Aperiam sint quia amet libero aliquam reprehenderit eveniet, sed, ea nihil corporis ut ipsam aut consequatur vitae eligendi praesentium enim. Corrupti in error, rerum saepe sint explicabo dolorem optio alias inventore asperiores, minus unde aliquam voluptatum eveniet est totam expedita qui tenetur vel laboriosam nesciunt sed minima omnis! Unde corporis a non ducimus asperiores, reprehenderit pariatur exercitationem architecto soluta eveniet nostrum voluptatum doloremque quo sunt? Magnam vero minus accusamus, ex voluptatum adipisci corrupti excepturi iste? Nisi ullam vitae blanditiis recusandae dignissimos saepe error.
+			Connect hospitals and blood banks. So they will know where is the nearest bank with required blood type and number of units present. They can also know about the dononrs phone number and blood type so that they can call the person in hospital for giving blood.
+
+In worst cases like attacks of 26/11 banks will be able to arrange blood quickly for the hospitals.
+
+Blood loan can take place. Borrow blood against some collateral and pay later.
 		</div>
 	</div>
-	<div style="width: 500px; height: 720px; background-color: Blue;"><img src="" alt="Random Image">
-	</div>
+	
+	<!-- </div> -->
 	<section class="faq-section" id="FAQs">
 		<div class="container">
 			<div class="row">

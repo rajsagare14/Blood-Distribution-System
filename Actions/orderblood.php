@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../Assets/css/dash.css">
-	<title>Order Blood</title>
-</head>
-<body>
-	
 <?php
 session_start();
 include('../Actions/functions.php');
@@ -23,51 +12,25 @@ if (isset($_SESSION['organization'])) {
 		</script>
 		";
 }
-?>
-<main>
-	<div class="sidebar-header">
-
-	
-	
-	
-	
-	</div>
-	
-	<div class="main-section-header">
-		<div class="logo-header">
-			<a href="#default" class="logo">
-				<img src="../Assets/Images/logo.png" id="userlogo" alt="image">
-			</a>
-		</div>
-		<!-- Nav bar system -->
-
-		<nav class="navbar">
-			
-		<div class="sidebar-navbar">
-			<!-- id="mySidebar" class="sidebar" -->
-		<!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
-			<a href="#">About</a>
-			<a href="#">Services</a>
-			<a href="#">Clients</a>
-			<a href="#">Contact</a>
-		</div>
-		<div class="other-content">
-		<i class="icon"><img src="../Assets/Images/usericon.png" alt=""></i>
-			<span class="org-name">
-
-				<?php
-				echo $_SESSION['organization'];
-				?>
-				</span>
-		</div>
-			
-		</nav>
-	</div>
-</main>
-<?php
 $typeBlood = $_POST['type'];
 $bloodgroup = $_POST['bloodgroup'];
 $quantity = $_POST['quantity'];
+$pincode = $_SESSION['pincode'];
+$areacode = substr($pincode,0,4);
+$areacode=$areacode."__";
+?>	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../Assets/css/dash1.css">
+	<title>Order Blood</title>
+</head>
+<body>
+<?php
+
 // echo $typeBlood;
 echo "<br>";
 // echo $bloodgroup;
@@ -79,29 +42,21 @@ $colname = "$typeBlood"."$bloodgroup";
 echo"<br>";
 // $query = "INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$loggedin_organization_name', '$colname', '$quantity', '$orderfrombldbankName', 'pending', current_timestamp());";
 // echo"$query";
-$searchblood = "SELECT * FROM `bloodstocks` WHERE (`$colname`>0 and `identity` LIKE \"blood bank\")";
+$searchblood = "SELECT id,name,$colname,identity FROM `bloodstocks` WHERE (`$colname`>$quantity and `identity` LIKE 'blood bank' and `pincode` LIKE '$areacode')";
 
 if ($result = mysqli_query($conn,$searchblood)) {
-	echo "<table>";
-	echo "<tr>";
-	echo "<th>id</th>";
-	echo "<th>Blood Bank Name</th>";
-	echo "<th>$colname</th>";
-	echo "</tr>";
-	
-	while($row = $result->fetch_array(MYSQLI_ASSOC)){
-		$row_id = $row['id'];
-		$row_name = $row['name'];
-		echo "<tr>";
-		echo "<td>$row_id</td>";
-		echo "<td>$row_name</td>";
-		echo "<td>$row[$colname]</td>";
-		echo "<td><button>Place Order</button></td>";
-		echo "</tr>";
-	}
-	echo "</table>" ;
-	echo "<br>" ;
+	$data = mysqli_fetch_all($result);
+	$_SESSION['blooddata'] = $data;
+	$_SESSION['bloodcolname']=$colname;
+	$_SESSION['quantity']=$quantity;
+	echo "
+		<script>
+		alert('$areacode')
+			window.location='../Partials/bookorder.php'
+		</script>
+	";
 }
+$query = "INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$loggedin_organization_name', '$colname', '$quantity', '$orderfrombldbankName', 'pending', current_timestamp());";
 // Amazing search algorithm
 // SELECT * FROM `bloodstocks` WHERE `pincode` LIKE "4160__";
 // INSERT INTO `order_blood` (`organizationname`, `product`, `quantity`, `orderedfrom`, `orderstatus`, `ordertime`) VALUES ('$hospitalname', '$colname', '$quantity', 'Kazi bank of blood', 'pending', current_timestamp());
@@ -113,6 +68,5 @@ if ($result = mysqli_query($conn,$searchblood)) {
 // 2  'hospitalnae' 'wbabp' 200		bank name 	approved	currtime
 // 3  'hospitalnae' 'wbabp' 200		bank name 	rejected	currtime
 ?>
-
 </body>
 </html>

@@ -29,12 +29,12 @@
             list-style: none;
             padding: 0px;
         }
-
-            .ui-autocomplete li {
-                margin: 0px;
-                width: 99%;
-            }
-
+        
+        .ui-autocomplete li {
+            margin: 0px;
+            width: 99%;
+        }
+        
                 .ui-autocomplete li a {
                     padding: 1%;
                     margin: 0px;
@@ -44,7 +44,7 @@
                     background-color: #e7eef6;
                     cursor: pointer;
                 }
-
+                
                     .ui-autocomplete li a:hover {
                         color: #fff;
                         background-color: #000 !important;
@@ -61,22 +61,22 @@
             background-image: none;
             border: 1px solid #ccc;
         }
-    </style>
-	<link rel="stylesheet" href="signup.css">
+        </style>
+        <link rel="stylesheet" href="../Assets/css/dash1.css">
 	<title>Sign Up</title>
 </head>
 <body>
-<h3>HOSPITAL REGISTRATION FORM</h3>
-<form enctype="multipart/form-data" name="myForm" method="POST" action="../Actions/signup-hospital.php" onsubmit="return validateForm();">
-    <fieldset>
-        <legend><b>Information</b></legend>
-        <span id="error-mess"></span>
-        <div class=radiol-all-text">
-            <div class="hospital-lable-text">Hospital Name&nbsp;<span style="color:red; font-weight:bold;">*</span></div>
-            <div class="hospital-inputs">
-                <input id="hospitalname" name="hospitalname" type="text" onchange="Duplicatehpname('hospitalname');" onblur="validateHospitalName()" ;="" autocomplete="off">
-                <span id="error-mess01"></span>
-            </div>
+    <h3>HOSPITAL REGISTRATION FORM</h3>
+    <form enctype="multipart/form-data" name="myForm" method="POST" action="../Actions/signup-hospital.php" onsubmit="return validateForm();">
+        <fieldset>
+            <legend><b>Information</b></legend>
+            <span id="error-mess"></span>
+            <div class=radiol-all-text">
+            <div class="hospital-lable-text">Hospital Name&nbsp;<span style="color:red; font-weight:bold;">*</span>
+        </div>
+        <div class="hospital-inputs">
+            <input id="hospitalname" name="hospitalname" type="text" onchange="Duplicatehpname('hospitalname');" onblur="validateHospitalName()" ;="" autocomplete="off">
+            <span id="error-mess01"></span>
         </div>
         <div class="hospital-all-text">
             <div class="hospital-inputs">&nbsp;</div>
@@ -100,7 +100,9 @@
 
 
         <div class="hospital-all-text">
-            <div class="hospital-lable-text">Health Care Provider Type:</div>
+            <div class="hospital-lable-text">
+                Health Care Provider Type:
+            </div>
             <div class="hospital-inputs-radio test_archive">
                         <span><input type="radio" name="hospitalcaretype" value="Hospital" checked='checked'>Hospital</span>
                         <span><input type="radio" name="hospitalcaretype" value="Dispensary">Dispensary</span>
@@ -111,30 +113,26 @@
                         <span><input type="radio" name="hospitalcaretype" value="Poly Clinic">Poly Clinic</span>
                         <span><input type="radio" name="hospitalcaretype" value="Primary Health Centre">Primary Health Centre</span>
                             <span><input type="radio" name="hospitalcaretype" value="Clinic">Clinic</span>
-        <span><input type="radio" name="hospitalcaretype" value="Others">Others</span>
-        </div>
-        </div>
-
+                        <span><input type="radio" name="hospitalcaretype" value="Others">Others</span>
+            </div>
         <div class="hospital-all-text">
-        <div class="hospital-lable-text">Hospital Registration Number&nbsp;<span style="color:red; font-weight:bold;">*</span></div>
+            <div class="hospital-lable-text">
+                Hospital Registration Number&nbsp;<span style="color:red; font-weight:bold;">*</span>
+            </div>
         <div class="hospital-inputs">
             <input name="hospitalregisnumber" id="hospitalregisnumber" type="text" onblur="validateRegistrationNumber()" autocomplete="off">
             <span id="error-mess02"></span>
         </div>
-        </div>
-
         <div class="hospital-all-text">
-        <div class="hospital-lable-text reg_image">
-            <ul>
-                <li>Registration Number Scanned Copy&nbsp;<span style="color:red; font-weight:bold;">*</span></li>
-                <li>(only  JPG, GIF, PNG images with max size: 4 MB allowed)</li>
-            </ul>
-        </div>
+            <div class="hospital-lable-text reg_image">
+                <ul>
+                    <li>Registration Number Scanned Copy&nbsp;<span style="color:red; font-weight:bold;">*</span></li>
+                    <li>(only  JPG, GIF, PNG images with max size: 4 MB allowed)</li>
+                </ul>
+            </div>
         <div class="hospital-inputs test_archive">
             <input name="Registerationnumberscan" type="file" id="Registerationnumberscan" onblur="validateScannedcopy()">
             <span id="error-mess03"></span>
-
-        </div>
         </div>
     </fieldset>
     <fieldset>
