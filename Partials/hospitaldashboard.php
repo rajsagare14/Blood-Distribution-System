@@ -26,10 +26,46 @@ if (isset($_SESSION['organization'])) {
 </head>
 
 <body>
-	<div id="center">
-		<div id="center-set">
-			<h1 align='center'><?php echo $_SESSION['organization']; ?></h1>
+<main>
+	<div class="sidebar-header">
+
+	
+	
+	
+	
+	</div>
+	
+	<div class="main-section-header">
+		<div class="logo-header">
+			<a href="#default" class="logo">
+				<img src="../Assets/Images/logo.png" id="userlogo" alt="image">
+			</a>
+		</div>
+		<!-- Nav bar system -->
+
+		<nav class="navbar">
 			
+		<div class="sidebar-navbar">
+			<!-- id="mySidebar" class="sidebar" -->
+		<!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
+			<a href="#">About</a>
+			<a href="#">Services</a>
+			<a href="#">Clients</a>
+			<a href="#">Contact</a>
+		</div>
+		<div class="other-content">
+		<i class="icon"><img src="../Assets/Images/usericon.png" alt=""></i>
+			<span class="org-name">
+
+				<?php
+				echo $_SESSION['organization'];
+				?>
+				</span>
+		</div>
+			
+		</nav>
+	</div>
+</main>
 				<!-- Getting data from database -->
 				<?php
 

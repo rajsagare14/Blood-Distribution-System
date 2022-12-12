@@ -12,6 +12,9 @@ session_start();
 	<title>Document</title>
 </head>
 <body>
+      <div class="image">
+	  <img src="../Assets/Images/bgimg.jpg"  alt="hhhhhhhhh"/>
+    </div>
 	<div class="login-page">
 		<div class="form">
 		  <form method = "POST" action = "../Actions/login.php">
@@ -22,6 +25,7 @@ session_start();
 		  </form>
 		</div>
 	  </div>
+	  
 	<script src="../Assets/login.js"></script>
 </body>
 </html>
