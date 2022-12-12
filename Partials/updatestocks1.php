@@ -112,8 +112,11 @@ if (isset($_SESSION['organization'])) {
 	</table>
 	<button>Update Stocks</button>
 </form> -->
-
+<br>
 <h1>Update the Blood Stocks</h1>
+<br>
+<br>
+<br>
 	<form action="../Actions/updatestocks1.php" method="post">
 		<!-- to get the stocks updated -->
 		<select name="type">

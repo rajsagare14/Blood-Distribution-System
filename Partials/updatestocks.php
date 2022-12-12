@@ -112,18 +112,24 @@ if (isset($_SESSION['organization'])) {
 	</table>
 	<button>Update Stocks</button>
 </form> -->
-
-<h1>Update the Blood Stocks</h1>
+<br>
+<div class="pagename">
+    <h1>Update the Blood Stocks</h1>
+</div>
+<br>
+<br>
+<br>
+<div class="pagename">
 	<form action="../Actions/updatestocks.php" method="post">
-		<!-- to get the stocks updated -->
+        <!-- to get the stocks updated -->
 		<select name="type">
-			<option value="wb">Whole Blood</option>
+            <option value="wb">Whole Blood</option>
 			<option value="pm">Plasma</option>
 			<option value="pl">Platelet</option>
-
+            
 		</select>
 		<select name="bloodgroup">
-			<option value="ap">A +ve</option>
+            <option value="ap">A +ve</option>
 			<option value="an">A -ve</option>
 			<option value="bp">B +ve</option>
 			<option value="bn">B -ve</option>
@@ -131,7 +137,7 @@ if (isset($_SESSION['organization'])) {
 			<option value="abn">AB -ve</option>
 			<option value="op">O +ve</option>
 			<option value="on">O -ve</option>
-
+            
 		</select>
 		<!-- to get stocks updated -->
 		<input type="text" name="quantity" placeholder="Enter the Quantity">
@@ -140,8 +146,9 @@ if (isset($_SESSION['organization'])) {
 		<br>
 		<br>
 	</form>
-<script>
-function myFunction() {
+</div>
+    <script>
+        function myFunction() {
   document.getElementsByClassName("myNumber").stepUp(5);
 }
 

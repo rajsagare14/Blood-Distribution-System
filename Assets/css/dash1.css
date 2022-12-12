@@ -79,10 +79,14 @@ table{
 
   }
 h1{
-	position: absolute;
+	/* position: absolute; */
 	top: 8px;
 	right: 40px;
-
+}
+.pagename,h1,form{
+	margin: auto;
+	display: flex;
+	justify-content: center;
 }
 #main{
 	/* background-color:yellow; */
@@ -161,9 +165,10 @@ table{
 
 
 /* CSS */
-button {
+button,select,input {
   /* background-color: #fff; */
   border: 2px solid #d5d9d9;
+  margin: 0px 5px;
   border-radius: 8px;
   box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
   box-sizing: border-box;
@@ -181,12 +186,14 @@ button {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: middle;
-  width: 100px;
-  float:inline-start;
-	padding: 4px;
+  width: auto;
+  /* float:inline-start; */
+	/* padding: 4px; */
 
 }
-
+input{
+	padding: 5px;
+}
 .button-13:hover {
   background-color: rgb(239, 245, 246);
 }

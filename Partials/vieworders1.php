@@ -131,11 +131,11 @@ $dataofBlood = $_SESSION['blooddata'];
 					<input type="hidden" name="quantity" value="<?php echo $dataofBlood[$i][3]; ?>">
 					<input type="hidden" name="orderedfrom" value="<?php echo $dataofBlood[$i][4]; ?>">
 					<select name="orderstatus">
-			<option value="pending">Pending</option>
-			<option value="accepted">Accept</option>
-			<option value="rejected">Reject</option>
-			<option value="cancelled">Cancel</option>
-		</select>
+						<option value="pending">Pending</option>
+						<option value="accepted">Accept</option>
+						<option value="rejected">Reject</option>
+						<option value="cancelled">Cancel</option>
+					</select>
 					<button>Save Changes</button>
 					
 				</form>
