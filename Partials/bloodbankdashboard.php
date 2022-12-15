@@ -26,6 +26,9 @@ if (isset($_SESSION['organization'])) {
 
 <body>
 <main>
+	<header>
+		<h1>Blood Bank Dashboard</h1>
+	</header>
 	<div class="sidebar-header">
 
 	

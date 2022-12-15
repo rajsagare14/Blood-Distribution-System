@@ -18,37 +18,39 @@ if (isset($_SESSION['organization'])) {
 ?>
 <!DOCTYPE html>
 <html>
+	
+	<head>
+		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+		<link rel="stylesheet" type="text/css" href="../Assets/css/dash.css" />
+		<title>BDS</title>
+	</head>
 
-<head>
-	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-	<link rel="stylesheet" type="text/css" href="../Assets/css/dash.css" />
-	<title>BDS</title>
-</head>
-
-<body>
-<main>
+	<body>
+		<main>
+			<header>
+				<h1>Hospital Dashboard</h1>
+			</header>
 	<div class="sidebar-header">
-
-	
-	
-	
-	
-	</div>
-	
-	<div class="main-section-header">
-		<div class="logo-header">
-			<a href="#default" class="logo">
-				<img src="../Assets/Images/logo.png" id="userlogo" alt="image">
-			</a>
+		
+		
+		
+		
+		
 		</div>
-		<!-- Nav bar system -->
-
-		<nav class="navbar">
+		
+		<div class="main-section-header">
+			<div class="logo-header">
+				<a href="#default" class="logo">
+					<img src="../Assets/Images/logo.png" id="userlogo" alt="image">
+				</a>
+			</div>
+			<!-- Nav bar system -->
 			
-		<div class="sidebar-navbar">
-			<!-- id="mySidebar" class="sidebar" -->
-		<!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
-			<a href="#">About</a>
+			<nav class="navbar">
+				<div class="sidebar-navbar">
+					<!-- id="mySidebar" class="sidebar" -->
+					<!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
+					<a href="#">About</a>
 			<a href="#">Services</a>
 			<!-- <a href="#">Clients</a> -->
 			<a href="#">Contact</a>

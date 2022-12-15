@@ -80,8 +80,7 @@ table{
   }
 h1{
 	position: absolute;
-	top: 8px;
-	right: 40px;
+	left: 170px;
 
 }
 #main{
@@ -204,4 +203,8 @@ button {
     line-height: 20px;
     width: 100%;
     background-color: rgb(54 27 137 / 10%);
+}
+header{
+	display: flex;
+	align-items: center;
 }
