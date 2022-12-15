@@ -164,6 +164,6 @@ input[type="submit" i] {
     border-image: initial;
 }
 button, html input[type="button"], input[type="reset"], input[type="submit"] {
-    -webkit-appearance: button;
+    /* -webkit-appearance: button; */
     cursor: pointer;
 }

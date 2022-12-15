@@ -180,7 +180,7 @@ button {
   touch-action: manipulation;
   vertical-align: middle;
   width: 100px;
-  float:inline-start;
+  /* float:inline-start; */
 	padding: 4px;
 
 }
