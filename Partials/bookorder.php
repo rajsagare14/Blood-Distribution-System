@@ -40,6 +40,7 @@ $quantity = $_SESSION['quantity'];
 </head>
 
 <body>
+	<h1>Blood Banks Near You which have the product in stock</h1>
 	<table>
 		<tr>
 			<th>ID</th>

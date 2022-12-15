@@ -17,6 +17,7 @@ session_start();
     </div>
 	<div class="login-page">
 		<div class="form">
+			<h3>Enter Hospital Credentials</h3>
 		  <form method = "POST" action = "../Actions/login.php">
 			<input type="text" placeholder="username" name="username"/>
 			<input type="password" placeholder="password" name = "password"/>
